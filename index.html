@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>The Eagle Onlion</title>
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
+     <!-- <link rel="stylesheet" href="/images/img/logo-removebg-preview (1).png"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/owl.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsived.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/owl.js"></script>
+    <script type="text/javascript" src="js/at-jqueryd.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- fevicon -->
+  <link rel="icon" href="/images/img/only-logo.png" type="image/x-icon">
+  <!-- font awasome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+
+</head>
+<style>
+    
+/* animation start */
+html{
+    scroll-behavior: smooth;
+}
+.hidden .nav-links{
+      opacity: 0;
+      display: none;
+      pointer-events: none; /* Disable links when hidden */
+    }
+
+
+    /* Loader Styles */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner-2 {
+  /* border: 4px solid rgba(0, 0, 0, 0.1); */
+  width: 40px;
+  height: 40px;
+  /* border-radius: 50%; */
+  /* border-left-color: #3498db; */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    scale: 2;
+    /* transform: rotate(0deg); */
+  }
+  
+  to {
+    scale: 5;
+    /* transform: rotate(360deg); */
+  }
+}
+
+
+/* button */
+.btn {
+  border: none;
+  font-family: 'Lato';
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  /* padding: 1px 80px; */
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before {
+  font-family: 'FontAwesome';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* Icon separator */
+.btn-sep {
+  padding: 20px 5px 20px 60px;
+}
+
+.btn-sep:before {
+  background: rgba(0,0,0,0.15);
+}
+
+/* Button 1 */
+.btn-1 {
+  /* background: #3498db; */
+  background-color: green;
+  color: #fff;
+}
+
+.btn-1:hover {
+  background: #2980b9;
+}
+
+.btn-1:active {
+  background: #2980b9;
+  top: 2px;
+}
+
+.btn-1:before {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  line-height: 3;
+  font-size: 140%;
+  width: 60px;
+}
+.icon-info:before {
+  content: "\f05a";
+}
+
+
+.sportspartner{
+    display: flex;
+    gap: 50px;
+    width: 80px;
+}
+.sportspartner img{
+    width: 100%;
+    height: 100%;
+}
+
+.footer-lower{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: -12px;
+
+}
+
+.footer-lower div{
+    width: 100px;
+}
+
+
+
+
+/* From Uiverse.io by gharsh11032000 */ 
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  /* background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% ); */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); */
+  margin: 40px auto;
+  background-color: #fff;
+  /* margin-right: 20px; */
+  /* gap: 1px; */
+  /* margin-left: 100px; */
+  /* margin-right: 100px; */
+}
+
+.card svg {
+  /* width: 48px; */
+  /* fill: #333; */
+  /* transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); */
+}
+
+.card:hover {
+  /* transform: rotate(0deg) scale(1.1); */
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+}
+
+.card__content {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%) rotate(-45deg); */
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  /* opacity: 0; */
+  /* transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); */
+}
+
+.card:hover .card__content {
+  /* transform: translate(-50%, -50%) rotate(0deg); */
+  /* opacity: 1;/ */
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+
+
+</style>
+
+
+<body>
+
+    <div id="loader">
+        <div class="spinnerr">
+          <img src="/images/img/only-logo.png" alt="" class="spinner-2" width="350">
+        </div>
+        <!-- <p>Loading...</p> -->
+      </div>
+    <div class="main-content">
+
+    <div class="lb_header" id="header">
+        <a class="lb_logo" href="#web1"><img src="images/img/only-logo.png" alt=""></a>
+        <a class="menuburger" href="javascript:void(0)"><img src="images/burger.png" alt=""></a>
+        <nav class="nav-links">
+            <ul id="nav-id" style="margin-left: 50px;">
+                <li><a href="">Home</a></li>
+                <li><a href="#web2">About Us</a></li>
+                <li class="mid_lg"><a href="#web1"></a></li>
+                <li><a href="#web6">Why Eagle Online </a></li>
+                <li><a href="#customer-support">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="lb_slider" id="web1">
+        <img class="cardsmall" src="images/img/header-1.png" alt="">
+        <div class="main">
+            <div class="mainslider">
+                <div class="item">
+                    <div class="lb_sld_cont">
+                        <span class="lb">India’s #1</span>
+                        <!-- <h3>T</h3> -->
+
+                        <h2>THE Eagle Online</h2>
+                        <h3>If you want to be a winner, soar fearlessly like an Eagle</h3>
+                        
+                        <div class="" style="">
+                            <button class="btn" style="margin-right: -20px; color: #291d0f; font-weight: bolder; font-size: larger;" >Get Your Id➡</button>
+                        <a class="" href="#" >
+                            <button class="btn btn-1 btn-sep fa-whatsapp" style="border: 1px solid rgb(126, 118, 118); border-radius: 10px; margin-right: -20px;">Whatsapp</button></a>
+
+                                 
+                                 <a class="" href="https://t.me/+n6U60dMOTng2Yjdl" >
+                                    <button class="btn btn-1 btn-sep fa-telegram" style="border: 1px solid rgb(126, 118, 118); border-radius: 10px; background-color: blue;">Telegram</button></a>
+                                </div>
+                    </div>
+                    <div class="lb_sld_img lb_sld_img_fix">
+                        <img class="sicard" src="images/cardbig.png" alt="" style="display:none;">
+                    </div>
+                    <div class="lb_sld_img lb_sld_img_player">
+
+                        <div class="lb_sld_img_p lb_sld_img_p1">
+                            <img class="si si4" src="/images/img/6403767-removebg-preview.png" alt="">
+                            <!-- <img class="si si5" src="images/s5.png" alt=""/> -->
+                            <!-- <img class="si si6" src="images/s6.png" alt=""/> -->
+                        </div>
+                        <div class="lb_sld_img_p lb_sld_img_p3">
+                            <!-- <img class="si si7" src="images/s7.png" alt=""/> -->
+                            <img class="si si8" src="images/img/header-animate-girl.png" alt="">
+                            <img class="si si9" src="images/slide32.png" alt="">
+                        </div>
+                        <div class="lb_sld_img_p lb_sld_img_p2">
+                            <!-- <img class="si si1" src="images/SLIDER-3.png" alt="" width="250"> -->
+                            <!-- <img class="si si2" src="images/casino.png" alt=""/> -->
+                            <img class="si si3" src="images/img/IMAGE-3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="marquee-section">
+        <div class="inner-container">
+            <div class="marquee">
+                <div class="marquee-block">
+                    <div class="content-box">
+                        
+                        <p class="title"><a href="https://t.me/+n6U60dMOTng2Yjdl">Telegram</a></p>
+                    </div>
+                    <div class="content-box">
+                        <p class="title"><a href="#">Whatsapp</a></p>
+                    </div>
+                    <div class="content-box">
+                        <p class="title"><a href="https://t.me/+n6U60dMOTng2Yjdl">Telegram</a></p>
+                    </div>
+                    <div class="content-box">
+                        <p class="title"><a href="#">Whatsapp</a></p>
+                    </div>
+                    <div class="content-box">
+                        <p class="title"><a href="https://t.me/+n6U60dMOTng2Yjdl">Telegram</a></p>
+                    </div>
+                    <div class="content-box">
+                        <p class="title"><a href="#">Whatsapp</a></p>
+                    </div>
+                    <div class="content-box">
+                        <p class="title"><a href="https://t.me/+n6U60dMOTng2Yjdl">Telegram</a></p>
+                    </div>
+                    <div class="content-box">
+                        <p class="title"><a href="#">Whatsapp</a></p>
+                    </div>
+    
+                    <div class="content-box">
+                        <p class="title"><a href="https://t.me/+n6U60dMOTng2Yjdl">Telegram</a></p>
+                    </div>
+                    <div class="content-box">
+                        <p class="title"><a href="#">Whatsapp</a></p>
+                    </div>
+                    <div class="content-box">
+                        <p class="title"><a href="https://t.me/+n6U60dMOTng2Yjdl">Telegram</a></p>
+                    </div>
+                    <div class="content-box">
+                        <p class="title"><a href="#">Whatsapp</a></p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>  
+
+    <div class="lb_walb" id="web2">
+        <div class="lb_walb_img">
+            <img class="lb_walb_img_bat" src="images/img/midleft.png" alt="">
+            <!-- <img class="lb_walb_img_ball" src="images/ball.png" alt=""> -->
+        </div>
+        <div class="lb_walb_con">
+            <h4>We are <span>The Eagle Online</span></h4>
+            <h2>Leading the Game in Sports Trading</h2>
+            <p>"India's Premier Sports-Trading Platform
+                Experience a revolutionary approach to sports trading with our pioneering platform. Enjoy the convenience of 24/7 deposit and withdrawal services, seamless connectivity with your favorite bookmakers, and a transparent real-time display of odds. Your ultimate destination for a distinctive and trusted trading experience."</p>
+            <div class="lb_walb_btn" style="display: flex; flex-wrap: wrap;">
+               
+                <a class="" href="#" >
+                    <button class="btn btn-1 btn-sep fa-whatsapp" style="border: 1px solid rgb(126, 118, 118); border-radius: 10px;">WhatsApp</button></a>
+
+
+                         <a class="" href="https://t.me/+n6U60dMOTng2Yjdl" >
+                            <button class="btn btn-1 btn-sep fa-telegram" style="border: 1px solid rgb(126, 118, 118); border-radius: 10px; background-color: blue;">Telegram</button></a>
+                 
+            </div>
+        </div>
+        <img class="lb_walb_card" src="images/img/casino.png" alt="">
+    </div>
+
+
+
+    <div class="lb_hiw" id="web4">
+        <div class="main">
+
+            <p><span>How</span> it works</p>
+             <!-- <p></p> -->
+
+            <ul class="hiw_counter">
+                <li>
+                    <div class="hiw_step">
+                        <span>Step</span>
+                        <img class="num_img" src="images/1.png" alt="">
+                    </div>
+                    <p>Message us on our WhatsApp number</p>
+                    <!-- <h4>Message us on our WhatsApp number</h4> -->
+                    <div class="step_arrow">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="hiw_step">
+                        <span>Step</span>
+                        <img class="num_img" src="images/2.png" alt="">
+                    </div>
+                    <p>Customer Satisfy guaranteed with all information</p>
+                    <div class="step_arrow">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="hiw_step">
+                        <span>Step</span>
+                        <img class="num_img" src="images/3.png" alt="">
+                    </div>
+                    <p>Start depositing &amp; withdrawal instantly</p>
+                    <div class="step_arrow">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                        <img class="sa_img" src="images/redarrow.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="hiw_step">
+                        <span>Step</span>
+                        <img class="num_img" src="images/4.png" alt="">
+                    </div>
+                    <p>Easily Earn from your skills</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="lb_celeb" id="web5">
+        <div class="main">
+
+            <div class="celeb_wrap">
+
+                <p><span>How to Earn</span> more </p>
+
+                <div class="celebslider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="/images/img/WhatsApp Image 2024-12-14 at 5.12.07 PM.jpeg" alt="">
+                            <a class="a_play" href="#pop12"><img class="clb_play" src="images/play.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="images/img/WhatsApp Image 2024-12-14 at 5.12.08 PM (2).jpeg" alt="">
+                            <a class="a_play" href="#pop9"><img class="clb_play" src="images/play.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="images/img/WhatsApp Image 2024-12-14 at 5.12.08 PM (1).jpeg" alt="">
+                            <a class="a_play" href="#pop1"><img class="clb_play" src="images/play.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="images/img/WhatsApp Image 2024-12-14 at 5.12.08 PM.jpeg" alt="">
+                            <a class="a_play" href="#pop2"><img class="clb_play" src="images/play.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="images/img/WhatsApp Image 2024-12-14 at 5.12.07 PM (1).jpeg" alt="">
+                            <a class="a_play" href="#pop3"><img class="clb_play" src="images/play.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="images/img/WhatsApp Image 2024-12-14 at 5.12.08 PM (2).jpeg" alt="">
+                            <a class="a_play" href="#pop4"><img class="clb_play" src="images/play.png" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="images/neil.jpeg" alt="">
+                            <a class="a_play" href="#pop5"><img class="clb_play" src="images/play.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="images/gizelle.jpeg" alt="">
+                            <a class="a_play" href="#pop6"><img class="clb_play" src="images/play.png" alt=""></a>
+                        </div>
+                    </div> -->
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="images/img/WhatsApp Image 2024-12-14 at 5.12.08 PM.jpeg" alt="">
+                            <a class="a_play" href="#pop7"><img class="clb_play" src="images/play.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pop12" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="/images/img/WhatsApp Video 2024-12-14 at 4.44.55 PM.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div>
+
+                <div id="pop1" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="/images/img/WhatsApp Video 2024-12-14 at 4.45.52 PM (1).mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div>
+
+                <div id="pop9" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="images/img/WhatsApp Video 2024-12-14 at 4.45.52 PM.mp4" type="video/mp4">
+				 </video>
+                        <!--         <iframe id="ytplayer" type="text/html" height="500" width="300"-->
+                        <!--src="https://www.youtube.com/embed/h7aT1fciHIU?autoplay=1"-->
+                        <!--frameborder="0"></iframe>-->
+                    </div>
+                </div>
+
+                <div id="pop10" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <iframe id="ytplayer" type="text/html" height="500" width="300" src="https://www.youtube.com/emed/6ppGMwWF" frameborder="0"></iframe>
+                    </div>
+                </div>
+
+                <div id="pop2" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="images/img/WhatsApp Video 2024-12-14 at 4.45.52 PM.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div>
+                <div id="pop3" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="/images/img/WhatsApp Video 2024-12-14 at 4.45.52 PM.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div>
+                <div id="pop4" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="images/img/WhatsApp Video 2024-12-14 at 4.45.53 PM (1).mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div>
+                <div id="pop5" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="images/img/WhatsApp Video 2024-12-14 at 4.45.53 PM.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div>
+                <div id="pop6" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="images/img/WhatsApp Video 2024-12-14 at 4.45.54 PM.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div>
+                <div id="pop7" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="images/img/WhatsApp Video 2024-12-14 at 4.45.54 PM.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+     <div class="lb_celeb" id="web5">
+        <div class="main">
+
+            <div class="celeb_wrap">
+
+               
+
+                <div class="celebslider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="/images/img/slider2/image-2.jpeg" alt="" height="350px">
+                            <!-- <a class="a_play" href="#pop12"><img class="clb_play" src="images/play.png" alt=""></a> -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="/images/img/slider2/image-3.jpeg" alt="" height="350px">
+                            <!-- <a class="a_play" href="#pop9"><img class="clb_play" src="images/play.png" alt=""></a> -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="/images/img/slider2/image-4.jpeg" alt="" height="350px">
+                            <!-- <a class="a_play" href="#pop1"><img class="clb_play" src="images/play.png" alt=""></a> -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="/images/img/slider2/image-5.jpeg" alt="" height="350px">
+                            <!-- <a class="a_play" href="#pop2"><img class="clb_play" src="images/play.png" alt=""></a> -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="/images/img/slider2/image-6.jpeg" alt="" height="350px">
+                            <!-- <a class="a_play" href="#pop3"><img class="clb_play" src="images/play.png" alt=""></a> -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="/images/img/slider2/image-7.jpeg" alt="" height="350px">
+                            <!-- <a class="a_play" href="#pop4"><img class="clb_play" src="images/play.png" alt=""></a> -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="images/img/slider2/image-8.jpeg" alt="" height="350px">
+                            <!-- <a class="a_play" href="#pop5"><img class="clb_play" src="images/play.png" alt=""></a> -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="images/img/slider2/image-2.jpeg" alt="" height="350px">
+                            <!-- <a class="a_play" href="#pop6"><img class="clb_play" src="images/play.png" alt=""></a> -->
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="clb_img_wrap">
+                            <img class="clb_img" src="images/img/slider2/image-4.jpeg" alt="" height="350px">
+                            <!-- <a class="a_play" href="#pop7"><img class="clb_play" src="images/play.png" alt=""></a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div id="pop12" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="media/sahil.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div> -->
+
+                <!-- <div id="pop1" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="media/esha.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div> -->
+
+                 <!-- <div id="pop9" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="media/sunny.mp4" type="video/mp4">
+				 </video>
+                        
+                    </div>
+                </div>  -->
+
+                <!-- <div id="pop10" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <iframe id="ytplayer" type="text/html" height="500" width="300" src="https://www.youtube.com/embed/6ppGMwWF6LI?autoplay=1" frameborder="0"></iframe>
+                    </div>
+                </div> -->
+
+                <!-- <div id="pop2" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="media/anveshi.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div> -->
+                <!-- <div id="pop3" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="media/sanjana.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div> -->
+                <!-- <div id="pop4" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="media/aftab.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div> -->
+                <!-- <div id="pop5" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="media/neil.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div> -->
+                <!-- <div id="pop6" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="media/gizelle.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div> -->
+                <!-- <div id="pop7" class="clb_popup">
+                    <div class="clb_popup_inn">
+                        <a class="clb_close" href="javascript:void(0)"><img src="images/close.png" alt=""></a>
+                        <video controls="" height="500" width="300">
+				  	<source src="media/angel.mp4" type="video/mp4">
+				 </video>
+                    </div>
+                </div> -->
+
+                <p><span>Paisa hi paisa </span>hoga</p>
+            </div>
+
+        </div>
+    </div>
+
+<!-- Start testimonial Area style-two-->
+    <div>
+        <h1 style="color: #f89b29; text-align: center; font-size: 50px;">Testimonials </h1>
+
+<div class="testimonial-slider owl-carousel owl-theme" style="margin: 0 auto;">
+                          
+   
+<div class="card">
+  <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg> -->
+   <!-- <img src="/images/img/only-logo.png" alt=""> -->
+  
+   <div class="card__content">
+    <div style="width: 30px;">
+        <img src="/images/img/quote.png" alt="" >
+    </div>
+    <p class="card__description">"This site offers an exceptional betting experience with user-friendly features, fast payouts, and fantastic bonuses. It's my go-to platform for gaming!"</p>
+    <p class="card__title" style="text-align: right;">~Mike J.
+    </p>
+  </div>
+</div>
+
+<div class="card">
+    <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg> -->
+    <!-- <img src="/images/img/only-logo.png" alt=""> -->
+    <div class="card__content">
+        <div style="width: 30px;">
+        <img src="/images/img/quote.png" alt="" >
+    </div>
+      <p class="card__description">"A reliable and exciting platform with great odds, quick withdrawals, and amazing promotions. Highly recommend"</p>
+      <p class="card__title" style="text-align: right;">~John D.
+    </p>
+    </div>
+  </div>
+  <div class="card">
+    <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg> -->
+    <!-- <img src="/images/img/only-logo.png" alt=""> -->
+    <div class="card__content">
+        <div style="width: 30px;">
+            <img src="/images/img/quote.png" alt="" >
+        </div>
+      <p class="card__description">"The best betting site I’ve ever used! Great bonuses and amazing support This site is a game-changer! User-friendly, secure, and rewarding."</p>
+      <p class="card__title" style="text-align: right;">~Sarah T.
+    </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg> -->
+    <!-- <img src="/images/img/only-logo.png" alt=""> -->
+    <div class="card__content">
+        <div style="width: 30px;">
+            <img src="/images/img/quote.png" alt="" >
+        </div>
+      
+      <p class="card__description">Outstanding platform with user-friendly navigation and top-notch betting options. A game-changer!</p>
+      <p class="card__title" style="text-align: right;">~Mike J.
+    </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg> -->
+    <!-- <img src="/images/img/only-logo.png" alt=""> -->
+    <div class="card__content">
+        <div style="width: 30px;">
+            <img src="/images/img/quote.png" alt="" >
+        </div>
+      <p class="card__description">"Fair play, fast withdrawals, and exciting promotions. Couldn't ask for more I love the variety of games and the seamless experience. Five stars!"</p>
+      <p class="card__title" style="text-align: right;">~Emily R.
+    </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg> -->
+    <!-- <img src="/images/img/only-logo.png" alt=""> -->
+    <div class="card__content">
+        <div style="width: 30px;">
+            <img src="/images/img/quote.png" alt="" >
+        </div>
+      <p class="card__description">"Impressive variety, fast payouts, and exciting bonuses. This site has it all! Amazing platform with fair play, quick withdrawals, and exciting promotions!"</p>
+      <p class="card__title" style="text-align: right;">~ Liam K
+    </p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+<!-- end testimonial Area style-two-->
+    <div class="lb_why" id="web6">
+        <div class="main">
+
+            <p><span>Why</span> The Eagle Onlion</p>
+            
+            <ul class="why_ul">
+                <li>
+                    <div class="why_icon">
+                        <img src="images/ic1.png" alt="">
+                    </div>
+                    <div class="why_cnt">
+                        <div>Get Your Online Sports ID Today!</div>
+                        <p>Start playing cricket and other sports instantly with your personalized online ID. Message us now to create your ID and join the action</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="why_icon">
+                        <img src="images/ic2.png" alt="">
+                    </div>
+                    <div class="why_cnt">
+                        <div>24/7 Expert Assistance</div>
+                        <p>
+                            Our dedicated team of professionals is available around the clock to support you through WhatsApp chats. We're just a message away!</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="why_icon">
+                        <img src="images/ic3.png" alt="">
+                    </div>
+                    <div class="why_cnt">
+                        <div>Transparency and Accuracy First</div>
+                        <p>We prioritize transparency and accuracy in everything we do, for both our team and our customers. Our commitment shines through in every aspect of our business. </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="why_icon">
+                        <img src="images/ic4.png" alt="">
+                    </div>
+                    <div class="why_cnt">
+                        <div>INSTANT WITHDRAWAL &amp; REFILL</div>
+                        <p>The eagle Book provides instant service of id withdrawal &amp; refilling with min to max amount. </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="why_icon">
+                        <img src="images/ic5.png" alt="">
+                    </div>
+                    <div class="why_cnt">
+                        <div>Eagle Book: Instant ID Services</div>
+                        <p>Experience fast and reliable ID withdrawal and refilling services with Eagle Book. We cater to all amounts, from minimum to maximum, ensuring seamless transactions every time.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="why_icon">
+                        <img src="images/ic6.png" alt="">
+                    </div>
+                    <div class="why_cnt">
+                        <div>Data Protection You Can Trust</div>
+                        <p>Your privacy is our priority. We ensure your data and personal information are fully safeguarded and never shared under any circumstances.</p>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <section class="marquee-section">
+        <div class="inner-container">
+            <div class="marquee">
+                <div class="marquee-block">
+                    <div class="content-box sportspartner" id="" style="width: 100px;">
+                        <img src="/images/img/sportspartner/aurora (1).png" alt="" style="width: 100%; height: 100%;">
+                        <!-- <p class="title"><a href="https://t.me/+n6U60dMOTng2Yjdl">Telegram</a></p> -->
+                    </div>
+                    <div class="content-box sportspartner">
+                        <img src="/images/img/sportspartner/esl.png" alt="">
+                        <!-- <p class="title"><a href="#">Whatsapp</a></p> -->
+                    </div>
+                    <div class="content-box sportspartner">
+                        <img src="/images/img/sportspartner/caf.png" alt="">
+
+                    </div>
+                    <div class="content-box sportspartner">
+                        <img src="/images/img/sportspartner/ihc.png" alt="">
+
+                    </div>
+                    <div class="content-box sportspartner">
+                        <img src="/images/img/sportspartner/logo-fcb (1).png" alt="">
+
+                    </div>
+                    <div class="content-box sportspartner">
+                        <img src="/images/img/sportspartner/logo-laliga.png" alt="">
+
+                    </div>
+                    <div class="content-box sportspartner">
+                        <img src="/images/img/sportspartner/psg-logo.webp" alt="">
+
+                    </div>
+                    <div class="content-box sportspartner">
+                        <img src="/images/img/sportspartner/seria-a-logo.svg" alt="">
+
+                    </div>
+    
+                    <div class="content-box sportspartner">
+                        <img src="/images/img/sportspartner/volleyball-world (1).png" alt="">
+
+                    </div>
+                    <div class="content-box sportspartner">
+                        <img src="/images/img/sportspartner/logo-laliga.png" alt="">
+
+                    </div>
+                    <div class="content-box sportspartner">
+                        <img src="/images/img/sportspartner/esl.png" alt="">
+
+                    </div>
+                    <div class="content-box sportspartner">
+                        <img src="/images/img/sportspartner/logo-fcb.png" alt="">
+
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>  
+
+    <!-- MAIN SECTION 5 START -->
+<div class="md_cs" id="customer-support">
+    <div class="main">
+        <div class="md_cs_inn container">
+            <div class="md_cs_lft">
+                <h2 style="color: #ffffff; text-shadow:0 0 0 !important">Customer<span style="color: #fd8600;"> Support</span></h2>
+                <p>With over 230 branches, we offer 24/7 withdrawal and refill services. Get in touch with our customer care team anytime for assistance</p>
+                <hr>
+                <h5>Customer Care No. For WhatsApp & Calling</h5>
+                <div class="md_cmn_wa">
+                    <a class="" href="#" >
+                        <button class="btn btn-1 btn-sep fa-whatsapp" style="border: 1px solid rgb(126, 118, 118); border-radius: 10px;">Whatsapp</button></a>
+
+                        <!-- <a class="" href="#" > -->
+                            <!-- <button class="btn btn-1 btn-sep fa-whatsapp" style="border: 1px solid rgb(126, 118, 118); border-radius: 10px;">Whatsapp</button></a> -->
+                             <!-- <br> -->
+                             <a class="" href="https://t.me/+n6U60dMOTng2Yjdl" >
+                                <button class="btn btn-1 btn-sep fa-telegram" style="border: 1px solid rgb(126, 118, 118); border-radius: 10px; background-color: blue;">Telegram</button></a> 
+                    <!-- <a class="a_wa" target="_blank" href="https://wa.me/message/6SJTSMVNLZDNC1" style="background-color: green;">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>+91 6367323867</a>
+                        <a class="a_wa" target="_blank" href="#" style="background-color: blue;">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>+91 6367323867</a> -->
+                        </div>
+            </div>
+            <div class="md_cs_rgt">
+                <div class="md_logocs">
+                    <img class="tplogo" src="/images/img/logo-removebg-preview (1).png" alt="MAHAKAL book official website">
+                    <div class="md_logokot">
+                        
+                    </div>
+                </div>
+                <h2 style="color: #ffffff; text-shadow:0 0 0 !important">24 hours <span style="color: #fd8600;">service</span></h2>
+            </div>
+        </div>
+        <div class="footer-lower">
+            <div>
+                <img src="/images/payment/HDFC.svg" alt="" style="width: 100%;">
+            </div>
+            <div>
+                <img src="/images/payment/PI_BankAxis.svg" alt="" style="width: 100%;">
+            </div>
+
+            <div>
+                <img src="/images/payment/PI_BankYES.svg" alt="" style="width: 100%;">
+            </div>
+            <div>
+                <img src="/images/payment/PI_ICICI.svg" alt="" style="width: 100%;">
+            </div>
+            <div>
+                <img src="/images/payment/PI_Kotak.svg" alt="" style="width: 100%;">
+            </div>
+            <div>
+                <!-- <img src="/images/payment/PI_PhonePe.svg" alt="" style="width: 100%;"> -->
+            </div>
+            <div>
+                <img src="/images/payment/PI_PayTM.svg" alt="" style="width: 100%;">
+            </div>
+            <div>
+                <img src="/images/payment/PI_SBI.svg" alt="" style="width: 100%;">
+            </div>
+            <div>
+                <img src="/images/payment/upi.svg" alt="" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>  
+<!-- <!-- MAIN SECTION 5 ENDS  -->
+
+<div class="lb_footer" style="text-align:center;margin-top: 100px;">
+    <div class="main">
+
+        <div class="ftr_links">
+            <a href="#web2">About Us</a>
+            <!-- <a href="#web4">How It Works</a> -->
+            <!-- <a href="#web5">Celebs Love Us</a> -->
+            <a href="#web6">Why eagle Online</a>
+            <!-- <a href="#web7">Contact Us           </a> -->
+            <a href="#"></a>
+            <!-- <a href="#" target="_blank">Privacy Policy</a> -->
+            <!-- <a href="#" target="_blank">Terms & Conditions</a> -->
+            <!-- <a href="" style=""></a>  -->
+
+
+            <!-- <div style="cursor: pointer;">instagram</div> -->
+            <!-- <a href="" >instagram</a> -->
+             
+             <div  style="cursor: pointer;">
+            <a href="https://www.instagram.com/goldonline666/" target="_blank">
+                <i class="fab fa-instagram ftr_social" >gg</i>
+            </a>
+        </div>
+            <a href="#" target="_blank"><i class="fab fa-telegram ftr_social"></i></a>
+        </div>
+
+
+
+    </div>
+</div>   
+
+</div>
+
+
+
+
+    <script>
+
+
+
+
+// Hide loader and display main content once the page is fully loaded
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  const mainContent = document.getElementById("main-content");
+
+  loader.style.display = "none"; // Hide loader
+  mainContent.style.display = "block"; // Show main content
+});
+
+
+
+          const header = document.getElementById('header');
+                                              
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('hidden'); // Add the 'hidden' class on scroll
+  } else {
+    header.classList.remove('hidden'); // Remove the 'hidden' class when scrolled to the top
+  }
+});
+
+
+// owlCarousel
+    $(document).ready(function () {
+        $('.celebslider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 1000, // Time between transitions in milliseconds (3 seconds here)
+            autoplayHoverPause: true, // Pause on mouse hover
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    });
+
+
+    $(document).ready(function () {
+        $('.testimonial-slider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            autoplay: true,
+            autoplayTimeout: 5000, // Change slide every 5 seconds
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+    });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</body>
+
+</html>
